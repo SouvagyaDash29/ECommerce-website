@@ -1,10 +1,10 @@
 import React from 'react';
 import { Heart, Star } from "lucide-react";
-import Toster from "../../../Assets/toster.png";
+
 const ProductItemCarousal = ({name, img, price}) => {
   return (
 	<div className='mb-3'>
-            <div className="bg-gray-100 w-52 p-3">
+            <div className="bg-gray-100 w-52 p-3 group">
             <div className="flex justify-between">
               <div className="flex flex-col items-center">
                 <span className="font-inter font-semibold text-xs px-3 py-1 bg-white w-fit rounded mb-1">NEW</span>
@@ -15,7 +15,7 @@ const ProductItemCarousal = ({name, img, price}) => {
             <div className="flex justify-center p-5">
               <img src={img} alt="" className="w-[100%] aspect-square object-contain"/>
             </div>
-            <button className="bg-neutral-900 text-white w-full py-1 rounded-md">Add to cart</button>
+            <button className="bg-neutral-900 text-white w-full py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity">Add to cart</button>
             </div>
             <div className=" grid gap-y-1 mt-3 ">
               <p className="flex">
