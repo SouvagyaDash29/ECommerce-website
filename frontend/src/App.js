@@ -3,7 +3,9 @@ import './App.css';
 import AuthLayout from './Auth/AuthLayout';
 import Signin from './Auth/components/Signin';
 import Signup from './Auth/components/Signup';
-import UserLayout from './components/Client/Pages/UserLayout';
+
+// USER
+import UserLayout from './components/Client/UserLayout';
 import HomePage from './components/Client/Pages/HomePage';
 import Shop from './components/Client/Pages/Shop';
 import Product from './components/Client/Pages/Product';

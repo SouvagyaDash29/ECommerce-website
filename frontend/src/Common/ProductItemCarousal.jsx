@@ -10,12 +10,12 @@ const ProductItemCarousal = ({name, img, price}) => {
                 <span className="font-inter font-semibold text-xs px-3 py-1 bg-white w-fit rounded mb-1">NEW</span>
                 <span className="bg-emerald-400 text-white w-fit px-4 rounded">-50%</span>
               </div>
-              <Heart className=" p-2 size-9 bg-white rounded-full"/>
+              <Heart className=" p-2 size-9 bg-white rounded-full hover:fill-red-600 hover:stroke-red-600"/>
             </div>
-            <div className="flex justify-center p-5">
+            <div className="flex justify-center p-3">
               <img src={img} alt="" className="w-[100%] aspect-square object-contain"/>
             </div>
-            <button className="bg-neutral-900 text-white w-full py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity">Add to cart</button>
+            <button className="bg-neutral-900 text-white w-full py-1 rounded-md max-sm:opacity-100 opacity-0 group-hover:opacity-100 transition-opacity">Add to cart</button>
             </div>
             <div className=" grid gap-y-1 mt-3 ">
               <p className="flex">
