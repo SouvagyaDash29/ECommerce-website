@@ -2,7 +2,7 @@ import React from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import Home from "../Assets/Home.png"
+// import Home from "../Assets/Home.png"
 import { CircleChevronLeft, CircleChevronRight } from 'lucide-react';
 
 
@@ -31,7 +31,7 @@ function SampleNextArrow(props) {
 	);
   }
 
-const Carousel = () => {
+const Carousel = ({ img }) => {
 	var settings = {
 		dots: true,
 		fade: true,
@@ -50,11 +50,11 @@ const Carousel = () => {
 
   return (
 
-		<Slider {...settings} className='-z-10'>
-        <img src={Home} alt="" className='size-[33vw] pb-3 ' />
-        <img src={Home} alt="" className='size-[33vw] pb-3 ' />
-        <img src={Home} alt="" className='size-[33vw] pb-3 ' />
-        <img src={Home} alt="" className='size-[33vw] pb-3 ' />
+		<Slider {...settings} className='-z-10 px-7'>
+        <img src={img} alt="" className='size-[33vw] pb-3 ' />
+        <img src={img} alt="" className='size-[33vw] pb-3 ' />
+        <img src={img} alt="" className='size-[33vw] pb-3 ' />
+        <img src={img} alt="" className='size-[33vw] pb-3 ' />
        
     </Slider>
 
