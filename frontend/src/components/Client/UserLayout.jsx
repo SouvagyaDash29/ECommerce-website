@@ -17,10 +17,10 @@ const UserLayout = () => {
           </NavLink>
           <X className="absolute right-4 size-4 active:text-red-600 cursor-pointer" />
         </div>
-        <div className="w-[80%] mx-auto">
+        {/* <div className="w-[80%] mx-auto"> */}
 
         <Navbar />
-        </div>
+        {/* </div> */}
         <Outlet />
         <div className="">
 

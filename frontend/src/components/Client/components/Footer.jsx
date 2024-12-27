@@ -17,7 +17,7 @@ const Footer = () => {
 			Gift & Decoration Store
 		  </div>
 		</div>
-		<nav className="flex max-md:flex-col lg:gap-7 gap-4">
+		<nav className="flex max-md:flex-col lg:gap-7 max-md:text-sm gap-4">
 		  <Link className="flex items-center gap-3"><Home className="size-4 lg:invisible" />Home</Link>
 		  <Link className="flex items-center gap-3"><Store className="size-4 lg:invisible" />Shop</Link>
 		  <Link className="flex items-center gap-3"><Package className="size-4 lg:invisible"/>Product</Link>
