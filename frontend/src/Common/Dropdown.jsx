@@ -1,18 +1,44 @@
-import React from 'react'
+import { ChevronDown } from "lucide-react";
+import React, { useState } from "react";
 
-const Dropdown = () => {
+const Dropdown = ({ tittle, items, placeholder }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedOption, setSelectedOption] = useState(null);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const onOptionsClick = (value) => () => {
+    setSelectedOption(value);
+    setIsOpen(false);
+  };
+
   return (
-    <form className="w-[20%] text-black">
-  <label for="categories" className="block mb-2 font-inter font-semibold text-gray-500 dark:text-white">CATEGORIES</label>
-  <select id="categories" className="border-2 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-neutral-500 focus:border-neutral-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 ">
-    <option selected>Living Room</option>
-    <option value="US">Drawing Room</option>
-    <option value="CA">Bed Room</option>
-    <option value="FR">Kitchen</option>
-    <option value="DE">Dinning room</option>
-  </select>
-</form>
-  )
-}
+    <div className="relative flex flex-col">
+      <span className="font-inter font-semibold text-neutral-500 mb-2 pl-1">{tittle}</span>
+      <div
+        onClick={toggleDropdown}
+        className="border-[2px] border-neutral-500 w-48 inline-flex justify-between px-3 py-2 rounded-lg cursor-pointer"
+      >
+        {selectedOption || placeholder}
+        <ChevronDown />
+      </div>
+      {isOpen && (
+        <div className="absolute w-48 top-[4.5rem] bg-white mt-2 rounded-md p-2">
+          {items.map((item, i) => (
+            <div
+              onClick={onOptionsClick(item)}
+              key={i}
+              className="hover:bg-gray-200 p-1.5 rounded cursor-pointer"
+            >
+              {item}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
 
-export default Dropdown
+export default Dropdown;
