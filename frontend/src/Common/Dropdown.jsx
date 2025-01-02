@@ -16,7 +16,7 @@ const Dropdown = ({ tittle, items, placeholder }) => {
 
   return (
     <div className="relative flex flex-col">
-      <span className="font-inter font-semibold text-neutral-500 mb-2 pl-1">{tittle}</span>
+      <span className="font-inter font-semibold text-neutral-500  mb-2 pl-1">{tittle}</span>
       <div
         onClick={toggleDropdown}
         className="border-[2px] border-neutral-500 w-48 inline-flex justify-between px-3 py-2 rounded-lg cursor-pointer"
